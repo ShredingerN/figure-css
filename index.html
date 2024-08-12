@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямоугольник и круг</title>
+
+    <style>
+        body{
+            background-color: gray;
+        }
+        .circle {
+            width: 80px;
+            height: 80px;
+            /* background-color: aqua; */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            animation: changeColor 3s infinite; /* Применение анимации changeColor с продолжительностью 3 секунды и повторением бесконечное количество раз */
+        }
+        
+        @keyframes changeColor {
+            0% { background-color: aqua; }
+            50% { background-color: rgb(14, 118, 236); }
+            100% { background-color: rgb(219, 158, 221); }
+        }
+
+        .rectangle{
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left:50%;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }      
+
+    </style>
+</head>
+
+<body>
+
+    <div class="circle"></div>
+    <div class="rectangle"></div>
+
+</body>
+
+</html>
